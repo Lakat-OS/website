@@ -1,8 +1,8 @@
 // App.tsx
 
 import React from 'react';
-import Article from './content/Article';
 import { BACKEND_URL, DOCKER_MODE, DEVELOPMENT_MODE, REVERSE_PROXY } from './utils/global';
+import './ComingSoon.css'; 
 
 const App: React.FC = () => {
 
@@ -42,8 +42,18 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
-      <button onClick={handleButtonClick}>Ping Backend</button>
+    <div className="d-flex justify-content-center align-items-center vh-100">
+      <div className="p-5 text-black text-center">
+        <div>
+          Coming Soon
+        </div>
+        <div>
+          <button className="btn btn-primary btn-constant-width mx-2 my-2" onClick={handleButtonClick}>Ping Backend</button>
+        </div>
+        <div>
+          <button className="btn btn-primary btn-constant-width mx-2 my-2" onClick={informationButtonClick}>Information</button>
+        </div>
+      </div>
     </div>
   );
 };
