@@ -23,7 +23,7 @@ connect to instance:
 ssh -i "keyfile.pem" ubuntu@ip_address
 ```
 
-update and upgrad
+update and upgrade
 ```
 sudo apt update
 sudo apt upgrade -y
