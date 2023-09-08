@@ -1,8 +1,8 @@
 // App.tsx
 
 import React from 'react';
-import { BACKEND_URL, DOCKER_MODE, DEVELOPMENT_MODE, REVERSE_PROXY } from './utils/global';
-import './ComingSoon.css'; 
+import Article from './content/Article';
+import { BACKEND_URL, DOCKER_MODE, DEVELOPMENT_MODE, REVERSE_PROXY } from '../utils/global';
 
 const App: React.FC = () => {
 
@@ -37,7 +37,7 @@ const App: React.FC = () => {
         console.error('Failed to run script.');
       }
     } catch (error) {
-      console.error('There was an error:', error);
+      console.error('There was an errorrr:', error);
     }
   };
 
@@ -48,7 +48,7 @@ const App: React.FC = () => {
           Coming Soon
         </div>
         <div>
-          <button className="btn btn-primary btn-constant-width mx-2 my-2" onClick={handleButtonClick}>Ping Backend</button>
+          <button className="btn btn-primary mx-2 my-2" onClick={handleButtonClick}>Ping Backend</button>
         </div>
         <div>
           <button className="btn btn-primary btn-constant-width mx-2 my-2" onClick={informationButtonClick}>Information</button>
