@@ -34,5 +34,17 @@ else
     echo "No frontend process found running on port 8086."
 fi
 
+# Get the PIDs of processes running on port 80
+PIDs=$(lsof -t -i:80)
+
+# If processes are found, kill them
+if [ -n "$PIDs" ]; then
+    for PID in $PIDs; do
+        kill -9 $PID
+        echo "Killed frontend process $PID running on port 80."
+    done
+else
+    echo "No frontend process found running on port 80."
+fi
 
 
