@@ -1,0 +1,29 @@
+:root {
+    --edge-length: 200px;
+  }
+  
+  .hexagon {
+    width: var(--edge-length);
+    height: calc(1.732 * var(--edge-length)); /* 1.732 is the approximate value of sqrt(3), which is used to calculate the height of a hexagon */
+    /* ... other styles ... */
+  }
+  
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    margin: 0 auto;
+  }
+  
+  .hexagon {
+    width: 200px;
+    height: 230px;
+    margin: 15px;
+    cursor: pointer;
+  }
+  
+  .hexagon:nth-child(4) {
+    margin-left: 100px;
+  }
+  
