@@ -1,0 +1,82 @@
+// Override Bootstrap variables
+$primary: #6C5B7B; // Primary Purple
+$danger: #8C4646;  // Bordeaux Red
+$warning: #FFD3B5; // Warm Pastel Orange
+$success: #A8E6CF; // Pastel Green
+$secondary: #3C3C3C; // Anthracite silvery shimmer
+$info: #A2D2FF;      // Soft blue
+
+
+// Import Bootstrap after the overrides
+@import "~bootstrap/scss/bootstrap";
+
+/* styles/globals.css */
+body {
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+.nav-enter {
+  transform: translateX(-100%);
+}
+
+.nav-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+
+.nav-exit {
+  transform: translateX(0);
+}
+
+.nav-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms;
+}
+
+.blur {
+  backdrop-filter: blur(5px);
+}
+
+.main-content {
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #FFDAB9;
+}
+  
+.list-group-item {
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+.nav-bar {
+  min-width: 250px;
+  opacity: 0.8;
+  backdrop-filter: blur(5px);
+}
+
+
+
+/* Scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #6C5B7B; /* This is the purple color from the palette */
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}

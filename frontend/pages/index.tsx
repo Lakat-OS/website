@@ -1,33 +1,58 @@
 import React from 'react';
+import Image from 'next/image';
+import LakatLogo from '../assets/img/Lakatdummy.png';
+import TwitterXLogo from '../assets/img/twitter-x-black.png';
+import GithubLogo from '../assets/img/github-mark.png';
 // import logo from './path-to-your-logo.svg'; // Adjust the path to your logo.svg
 
 function HomePage() {
-  const handleHexagonClick = (label: string) => {
-    alert(`Clicked on ${label}`);
-  };
-
-  const hexagonSVG = (label: string, callback: any) => (
-    <svg width="var(--edge-length)" height="calc(1.732 * var(--edge-length))" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="200,0 400,100 400,300 200,400 0,300 0,100" stroke="#800020" fill="none" stroke-width="10"/>
-      <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">{label}</text>
-    </svg>
-  );
-
+ 
   return (
-    <div className="container">
-      {/* <div className="hexagon" onClick={() => handleHexagonClick('About')}>
-        <svg width="200" height="230" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="200,0 400,100 400,300 200,400 0,300 0,100" stroke="#800020" fill="none" stroke-width="10"/>
-          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">About</text>
-        </svg>
-      </div> */}
-      <div className="hexagon">{hexagonSVG('About', () => handleHexagonClick('About'))}</div>
-      {/* ... Repeat for other hexagons ... */}
-      <div className="hexagon">
-        {/* <img src={logo} alt="Logo" width="200" height="230" onClick={() => handleHexagonClick('Logo')} /> */}
-        Hallo
+    <div className="container text-center main-content">
+      <div className="row justify-content-center" style={{ height: '20vh' }}>
+        <div className="col">
+          {/* Content for the first row (header) */}
+          {/* Header Content */}
+        </div>
+      </div>
+
+      <div className="row justify-content-center" style={{ height: '60vh' }}>
+        <div className="col">
+          {/* Content for the second row */}
+          <div>
+          <Image src={LakatLogo} alt="Lakat Icon" width={320} height={100} className="ms-3 mt-3 mb-3" />
+          <h2>An open and permissionless architecture for continuous integration academic publishing</h2>
+          
+        </div>
+        <div className="row mt-5">
+
+          <div className="col-3">
+            <button className="btn btn-primary btn-constant-width mx-2 my-2" style={{width:"100%"}}>Get Started</button>
+          </div>
+          <div className="col-3">
+            <button className="btn btn-info btn-constant-width mx-2 my-2" style={{width:"100%"}}>Learn More</button>
+          </div>
+          <div className="col-3">
+            <button className="btn btn-secondary btn-constant-width mx-2 my-2" style={{width:"100%"}}>Join the Community</button>
+          </div>
+          <div className="col-3">
+            <button className="btn btn-danger btn-constant-width mx-2 my-2" style={{width:"100%"}}>Whitepaper</button>
+          </div>
+        </div>
+      
+      
+        </div>
+      </div>
+
+      <div className="row justify-content-center" style={{ height: '20vh' }}>
+        <div className="col">
+          <a href="https://github.com/Lakat-OS"><Image src={GithubLogo} alt="Github Icon" width={23} height={23} className="ms-3 mt-3" /></a>
+          <a href="https://twitter.com/__Lakat__"><Image src={TwitterXLogo} alt="Lakat Icon" width={23} height={23} className="ms-3 mt-3" /></a>
+          <a href="your_telegram_link"></a>
+        </div>
       </div>
     </div>
+  
   );
 }
 
