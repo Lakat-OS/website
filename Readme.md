@@ -1,3 +1,6 @@
+## Developer
+
+### Environment variables
 
 Add to the environment file *.env* the following entries:
 ```
@@ -8,14 +11,54 @@ PGADMIN_DEFAULT_EMAIL=<<enter random email>>
 PGADMIN_DEFAULT_PASSWORD=<<enter random password>>
 ```
 
+### Set up local development environment
+
+You need to have python installed on the system. Then for local development create a local python environment:
+```
+python3 -m venv backend/.venv
+source backend/.venv/bin/activate
+pip install -r backend/requirements.txt
+```
+
+To start and stop the local services:
+```
+source start.sh --local
+```
+and if you want to stop it
+```
+source stop.sh
+```
+Sometimes if you interrupt the task in the terminal, you need to navigate back to the root folder `cd ..`
+
+If you install new packages check which new requirements you have by
 
 ```
-pip list --not-required | awk '{print $1 "==" $2}' > requirements.txt
+pip list --not-required | awk '{print $1 "==" $2}'
 ```
+
+### For development testing and production
+
+Use 
+```
+source start.sh --development
+source start.sh --development --build
+```
+depending on whether you need to rebuild the docker containers or not.
+
+Again use 
+```
+source stop.sh
+```
+to stop the services
+
+### Introspect
 
 ```
 docker exec -it backend cat /var/log/apache2/error.log
 ```
+
+
+## AWS deployment
 
 connect to instance:
 
