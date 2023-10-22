@@ -36,7 +36,9 @@ function HomePage() {
             <button className="btn btn-secondary btn-constant-width mx-2 my-2" style={{width:"100%"}}>Join the Community</button>
           </div>
           <div className="col-3">
-            <button className="btn btn-danger btn-constant-width mx-2 my-2" style={{width:"100%"}}>Whitepaper</button>
+            <a href="https://arxiv.org/pdf/2306.09298.pdf" target="_blank" rel="noopener noreferrer">
+                <button className="btn btn-danger btn-constant-width mx-2 my-2" style={{width:"100%"}}>Whitepaper</button>
+            </a>
           </div>
         </div>
       
