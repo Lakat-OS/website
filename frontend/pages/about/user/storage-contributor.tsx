@@ -1,12 +1,11 @@
 import styles from '../../../styles/about.module.scss';
 
-export default function AboutLignification() {
+export default function AboutStorageContributors() {
   return (
     <div className={styles.container}>
-      <h1>Lignification</h1>
+      <h1>Storage Contributors</h1>
       <div className="mx-3">
       <p>
-      
       </p>
       </div>
       <a

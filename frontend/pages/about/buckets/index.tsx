@@ -1,12 +1,12 @@
 import styles from '../../../styles/about.module.scss';
 
-export default function AboutLignification() {
+export default function AboutBuckets() {
   return (
     <div className={styles.container}>
-      <h1>Lignification</h1>
+      <h1>Buckets</h1>
       <div className="mx-3">
       <p>
-      
+      Buckets are the central data structure of Lakat. They are a generalization of the concept of a file.
       </p>
       </div>
       <a

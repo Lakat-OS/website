@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import React from 'react';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import '../styles/global.scss'; // Assuming you have a global CSS file
 // import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,6 +10,7 @@ import LakatLogo from '../assets/img/Lakatdummy.png';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [showNav, setShowNav] = useState(false);
+  const router = useRouter();
 
   function handleShowNavBar() {
     setShowNav(!showNav);
@@ -38,17 +40,17 @@ function MyApp({ Component, pageProps }: AppProps) {
             onClick={() => setShowNav(false)}
           ></button>
           <ul className="list-group list-group-flush mt-5">
-            <li className="list-group-item" onClick={() => setShowNav(false)}>
-              Why
+            <li className="list-group-item" onClick={() => router.push('/')}>
+              Home
             </li>
-            <li className="list-group-item" onClick={() => setShowNav(false)}>
-              What
+            <li className="list-group-item" onClick={() => router.push('/about')}>
+              About
             </li>
-            <li className="list-group-item" onClick={() => setShowNav(false)}>
-              Who
+            <li className="list-group-item" onClick={() => router.push('/get-started')}>
+              Get Started
             </li>
-            <li className="list-group-item" onClick={() => setShowNav(false)}>
-              When
+            <li className="list-group-item" onClick={() => router.push('/community')}>
+              Community
             </li>
           </ul>
         </div>

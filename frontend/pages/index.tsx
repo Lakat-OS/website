@@ -48,28 +48,43 @@ function HomePage() {
           </div>
           <div className="row mt-5">
             <div className="col-3">
+            <a
+                className={`nav-link`}
+                href="/get-started"
+              >
               <button
                 className="btn btn-primary btn-constant-width mx-2 my-2"
                 style={{ width: '100%' }}
               >
                 Get Started
               </button>
+              </a>
             </div>
             <div className="col-3">
+              <a
+                className={`nav-link`}
+                href="/about"
+              >
               <button
                 className="btn btn-info btn-constant-width mx-2 my-2"
                 style={{ width: '100%' }}
               >
                 Learn More
               </button>
+              </a>
             </div>
             <div className="col-3">
+            <a
+                className={`nav-link`}
+                href="/community"
+              >
               <button
                 className="btn btn-secondary btn-constant-width mx-2 my-2"
                 style={{ width: '100%' }}
               >
                 Join the Community
               </button>
+              </a>
             </div>
             <div className="col-3">
               <a
