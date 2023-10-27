@@ -40,15 +40,15 @@ services:
       - pgdata2:/var/lib/postgresql/data
       # - ./path/to/your/sqldump:/docker-entrypoint-initdb.d/dump.sql
 
-  pgadmin:
-    image: dpage/pgadmin4
-    container_name: client
-    ports:
-      - "8881:80"
-    env_file:
-    - .env
-    depends_on:
-      - database
+  # pgadmin:
+  #   image: dpage/pgadmin4
+  #   container_name: client
+  #   ports:
+  #     - "8881:80"
+  #   env_file:
+  #   - .env
+  #   depends_on:
+  #     - database
 
 # volumes:
 #   postgres-data:
