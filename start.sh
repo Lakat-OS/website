@@ -30,7 +30,7 @@ elif [ "$1" == "--development" ]; then
     echo "--> Done"
 elif [ "$1" == "--production" ]; then
     echo "--> Starting production environment"
-    docker-compose -f docker-compose-production.yml up -d
+    docker-compose -f docker-compose-production.yml up --build -d
     echo "--> Done"
 else
     echo "Please provide an argument: --local, --development or --production"
