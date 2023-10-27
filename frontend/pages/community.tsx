@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import LeonhardHorstmeyer from '../assets/img/LeonhardHorstmeyer.jpg';
+import MahdiKourehpaz from '../assets/img/MahdiKourehpaz.jpeg';
+import AdrianZ from '../assets/img/AdrianZ.jpg';
 import styles from '../styles/community.module.scss'; // Assuming you have a community.module.scss for styles
 
 export default function Community() {
@@ -28,28 +30,31 @@ export default function Community() {
                     },
                     {
                         display:'Adrian Z',
-                        image_url: LeonhardHorstmeyer,
+                        image_url: AdrianZ,
                         description: 'Adrian is a project manager in the web3 sphere.'
                     },
                     {
-                        display:'Mahdi Kourepaz',
-                        image_url: LeonhardHorstmeyer,
+                        display:'Mahdi Kourehpaz',
+                        image_url: MahdiKourehpaz,
                         description: 'Mahdi is a software engineer and a tar player.'
                     }].map((name, index) => (
                     <div className="col" key={index}>
                         <div className="card">
-                            <div className={`card-header bg-primary text-white`}>
-                                {name.display}
-                            </div>
                             <Image
                                 className="card-img-top"
                                 src={name.image_url}
                                 alt={name.display}
-                                height={200}
+                                height={300}
                                 width={160}
+                                // fill
+                                style={{objectFit:"cover"}}
+                                objectPosition="center"  // or any other value you prefer
                             />
                             <div className="card-body">
-                                {name.description}
+                                <h5 className="card-title">{name.display}</h5>
+                                <p className="card-text">
+                                    {name.description}
+                                </p>
                             </div>
                         </div>
                     </div>
