@@ -26,12 +26,12 @@ export default function Community() {
                     {
                         display:'Leonhard Horstmeyer',
                         image_url: LeonhardHorstmeyer,
-                        description: 'Leonhard is a theoretical physicist, an artistic researcher and a developer.'
+                        description: 'Leonhard is a theoretical physicist, researcher and a blockchain developer.'
                     },
                     {
                         display:'Adrian Zhunussov',
                         image_url: AdrianZhunussov,
-                        description: 'Adrian is a project manager in the web3 sphere.'
+                        description: 'Adrian is a product manager in the fintech and web3 sphere. He has experience with data-driven decentralized systems and DeSci.'
                     },
                     {
                         display:'Mahdi Kourehpaz',
