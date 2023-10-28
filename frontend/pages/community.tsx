@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import LeonhardHorstmeyer from '../assets/img/LeonhardHorstmeyer.jpg';
+import LeonhardHorstmeyer from '../assets/img/Leo_closeup.png';
 import MahdiKourehpaz from '../assets/img/MahdiKourehpaz.jpeg';
-import AdrianZ from '../assets/img/AdrianZ.jpg';
+import AdrianZhunussov from '../assets/img/AdrianZhunussov.jpg';
 import styles from '../styles/community.module.scss'; // Assuming you have a community.module.scss for styles
 
 export default function Community() {
@@ -29,14 +29,14 @@ export default function Community() {
                         description: 'Leonhard is a theoretical physicist, an artistic researcher and a developer.'
                     },
                     {
-                        display:'Adrian Z',
-                        image_url: AdrianZ,
+                        display:'Adrian Zhunussov',
+                        image_url: AdrianZhunussov,
                         description: 'Adrian is a project manager in the web3 sphere.'
                     },
                     {
                         display:'Mahdi Kourehpaz',
                         image_url: MahdiKourehpaz,
-                        description: 'Mahdi is a software engineer and a tar player.'
+                        description: 'Mahdi is a data scientist, scholar in quantum chaos, software engineer and a tar player.'
                     }].map((name, index) => (
                     <div className="col" key={index}>
                         <div className="card">
