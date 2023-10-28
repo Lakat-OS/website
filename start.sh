@@ -28,6 +28,19 @@ elif [ "$1" == "--development" ]; then
         docker-compose up
     fi
     echo "--> Done"
+elif [ "$1" == "--only-frontend" ]; then
+    ## if the second argument is --build then echo hello, else say hi
+    if [ "$2" == "--development" ]; then
+        echo "--> Starting development environment with build"
+        docker-compose -f docker-compose-only-frontend.yml up --build
+    elif [ "$2" == "--production"]; then 
+        echo "--> Starting production environment with build"
+        docker-compose -f docker-compose-production-only-frontend.yml up --build -d
+    else
+        echo "--> Starting development environment without build"
+        docker-compose up
+    fi
+    echo "--> Done"
 elif [ "$1" == "--production" ]; then
     echo "--> Starting production environment"
     docker-compose -f docker-compose-production.yml up --build -d

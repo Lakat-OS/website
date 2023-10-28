@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+      args:
+        - REACT_APP_DEVELOPMENT_MODE=development
+        - REACT_APP_DOCKERIZED=dockerized
+    ports:
+      - "3000:80"
+   
