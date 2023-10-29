@@ -100,6 +100,8 @@ then log out of the instance and log in again. then clone the repo:
 ```
 git clone https://github.com/Lakat-OS/website.git
 ```
+Then copy .env file over using:
+
 
 
 ```

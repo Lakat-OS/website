@@ -33,7 +33,7 @@ elif [ "$1" == "--only-frontend" ]; then
     if [ "$2" == "--development" ]; then
         echo "--> Starting development environment with build"
         docker-compose -f docker-compose-only-frontend.yml up --build
-    elif [ "$2" == "--production"]; then 
+    elif [ "$2" == "--production" ]; then 
         echo "--> Starting production environment with build"
         docker-compose -f docker-compose-production-only-frontend.yml up --build -d
     else
