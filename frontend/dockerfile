@@ -25,10 +25,10 @@ RUN yarn install
 COPY . .
 
 # Build the app
-RUN yarn build:next:dev
+RUN yarn build:next:dev --debug
 
 # Expose the port the app runs on
 EXPOSE 80
 
 # Command to run the application
-CMD ["yarn", "start:next:prod"]
+CMD ["yarn", "start:next:prod:H:port"]
