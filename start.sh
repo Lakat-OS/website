@@ -37,8 +37,7 @@ elif [ "$1" == "--only-frontend" ]; then
         echo "--> Starting production environment with build"
         docker-compose -f docker-compose-production-only-frontend.yml up --build -d
     else
-        echo "--> Starting development environment without build"
-        docker-compose up
+        echo "--> Can only be used with --development or --production"
     fi
     echo "--> Done"
 elif [ "$1" == "--production" ]; then
