@@ -102,7 +102,9 @@ git clone https://github.com/Lakat-OS/website.git
 ```
 Then copy .env file over using:
 
-
+```
+sudo source copy_dotenv_via_scp.sh
+```
 
 ```
 sudo docker system prune -a
