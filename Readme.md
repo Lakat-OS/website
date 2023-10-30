@@ -106,7 +106,11 @@ Then copy .env file over using:
 sudo source copy_dotenv_via_scp.sh
 ```
 
-And then push changes to instance
+And then push changes to instance using
+
+```
+source push_changes_to_instance.sh
+```
 
 
 ```
