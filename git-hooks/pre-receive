@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Get the branch name
+echo "Ciao"
