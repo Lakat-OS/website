@@ -8,7 +8,7 @@ Thumbs.db
 
 # connect to server via ssh
 *.pem
-connect_via_ssh.sh
+# connect_via_ssh.sh
 
 # global environments
 .env
