@@ -106,6 +106,9 @@ Then copy .env file over using:
 sudo source copy_dotenv_via_scp.sh
 ```
 
+And then push changes to instance
+
+
 ```
 sudo docker system prune -a
 ```
