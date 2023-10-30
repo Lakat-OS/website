@@ -112,6 +112,8 @@ And then push changes to instance using
 source push_changes_to_instance.sh
 ```
 
+It might require sudo priviledges.
+
 
 ```
 sudo docker system prune -a
