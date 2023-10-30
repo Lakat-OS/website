@@ -78,7 +78,7 @@ reboot instance
 sudo apt install docker.io git -y
 ```
 
-```
+``` 
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
