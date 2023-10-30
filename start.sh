@@ -18,6 +18,7 @@ if [ "$1" == "--local" ]; then
     yarn start:next:dev:port
     # done  
     echo "--> Done"
+    exit 0
 elif [ "$1" == "--development" ]; then
     ## if the second argument is --build then echo hello, else say hi
     if [ "$2" == "--build" ]; then
@@ -40,10 +41,12 @@ elif [ "$1" == "--only-frontend" ]; then
         echo "--> Can only be used with --development or --production"
     fi
     echo "--> Done"
+    exit 0
 elif [ "$1" == "--production" ]; then
     echo "--> Starting production environment"
     docker-compose -f docker-compose-production.yml up --build -d
     echo "--> Done"
+    exit 0
 else
     echo "Please provide an argument: --local, --development or --production"
 fi
