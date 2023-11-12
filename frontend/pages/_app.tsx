@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 
   return (
-    <div className="container-fluid h-100 p-0 overflow-hidden">
+    <div className="container-fluid h-100 p-0">
       <div className="position-fixed top-0 start-0 mt-3 ms-3">
         {!showNav && (
           <button className="btn btn-primary" onClick={handleShowNavBar}>
