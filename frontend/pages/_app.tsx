@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <li className="list-group-item" onClick={() => navigateAndCloseNav('/')}>
               Home
             </li>
-            <li className="list-group-item" onClick={() => router.push('/about')}>
+            <li className="list-group-item">
               About
               <button onClick={toggleSublist} className="sublist-toggle-btn">
                 {isSublistOpen ? "▲":"▼"}
