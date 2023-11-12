@@ -86,7 +86,7 @@ least one other branch.
                 href="/about"
               >
               <button
-                className="btn btn-info btn-constant-width mx-2 my-2"
+                className="btn btn-primary btn-constant-width mx-2 my-2"
               >
                 Back to About
               </button>

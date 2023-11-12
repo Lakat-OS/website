@@ -50,6 +50,38 @@ body {
   overflow: hidden;
   background-color: #ede5de;
 }
+
+.landing-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow-y: auto;
+}
+
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.button-style {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  margin-bottom: 10px; /* Adds spacing when wrapped */
+}
+
+.separator {
+  margin: 0 10px;
+  @media (max-width: 576px) { /* Adjust breakpoint as needed */
+    display: none; /* Hide separator on small screens */
+  }
+}
+
+
   
 .list-group-item {
   cursor: pointer;
@@ -58,7 +90,33 @@ body {
   &:hover {
     background-color: #f8f9fa;
   }
+
+  .sublist {
+    list-style: none;
+    padding-left: 20px; // Adjust as needed
+
+    .sublist-item {
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #e9ecef;
+      }
+    }
+  }
 }
+
+.sublist-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px; // Adjust as needed
+
+  &:focus {
+    outline: none;
+  }
+}
+
 
 .nav-bar {
   min-width: 250px;

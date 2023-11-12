@@ -1,0 +1,41 @@
+.topdiv {
+    height: 0vh;
+}
+
+.container {
+    display: flex; /* Add this line */
+    flex-direction: column; /* Use column for vertical stacking of children */
+    align-items: center; /* Center children vertically */
+    // justify-content: center; /* Center children horizontally */
+    width: 96vw;
+    height: 90vh; /* Adjust this value as needed */
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    overflow-y: auto;
+    text-align: justify;
+    scrollbar-width: thick;
+    scrollbar-color: black #f1f1f1;
+
+    /* Scrollbar styles */
+    &::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: black;
+        border-radius: 15px; /* Half of the width to make it rounded */
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #ede5de;
+    }
+}
+
+
+.profileContainer {
+    width: 95%;
+    margin: 50px auto 20px;
+    // text-align: justify;
+}

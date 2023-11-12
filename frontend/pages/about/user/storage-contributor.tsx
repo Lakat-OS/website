@@ -9,15 +9,15 @@ export default function AboutStorageContributors() {
       </p>
       </div>
       <a
-                className={`nav-link`}
-                href="/about"
-              >
-              <button
-                className="btn btn-info btn-constant-width mx-2 my-2"
-              >
-                Back to About
-              </button>
-              </a>
+        className={`nav-link`}
+        href="/about/user"
+      >
+      <button
+        className="btn btn-primary btn-constant-width mx-2 my-2"
+      >
+        Back to Contributors
+      </button>
+      </a>
             
     </div>
     );
