@@ -106,15 +106,34 @@ Then copy .env file over using:
 sudo source copy_dotenv_via_scp.sh
 ```
 
-And then push changes to instance using
+### Continuous Deployment Set Up
+
+First generate a key pair:
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+save it under some filename, say `~/.ssh/lakat_science_key`. Then copy the key to the remote machine 
+
+```
+scp -i "lakat_science_website.pem" ~/.ssh/lakat_science_key.pub ubuntu@ip_address:~/lakat_science_key.pub
+```
+
+Then connect to the instance and add the key to the authorized hosts:
+```
+cat ~/lakat_science_key.pub >> ~/.ssh/authorized_keys
+```
+Then verify that it works.
+```
+ssh -i ~/.ssh/lakat_science_key ubuntu@ip_address
+```
+
+
+### Continuous Deployment
+
+You can either directly deploy:
 
 ```
 source push_changes_to_instance.sh
 ```
 
-It might require sudo priviledges.
-
-
-```
-sudo docker system prune -a
-```
+Or you use the github actions, which are triggered when you push to main.

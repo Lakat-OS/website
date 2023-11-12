@@ -10,11 +10,30 @@ import LakatLogo from '../assets/img/Lakatdummy.png';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [showNav, setShowNav] = useState(false);
+  const [isSublistOpen, setIsSublistOpen] = useState(false);
   const router = useRouter();
 
   function handleShowNavBar() {
     setShowNav(!showNav);
   }
+
+  const toggleSublist = () => {
+    setIsSublistOpen(!isSublistOpen);
+  };
+
+  // if showNav changes setIsSublistOpen to false
+  React.useEffect(() => {
+    setIsSublistOpen(false);
+  }, [showNav]);
+
+  const navigateAndCloseNav = (path: string) => {
+    router.push(path);
+    window.location.href = path;
+    setShowNav(false);
+  };
+  
+
+
 
   return (
     <div className="container-fluid h-100 p-0 overflow-hidden">
@@ -40,16 +59,32 @@ function MyApp({ Component, pageProps }: AppProps) {
             onClick={() => setShowNav(false)}
           ></button>
           <ul className="list-group list-group-flush mt-5">
-            <li className="list-group-item" onClick={() => router.push('/')}>
+            <li className="list-group-item" onClick={() => navigateAndCloseNav('/')}>
               Home
             </li>
             <li className="list-group-item" onClick={() => router.push('/about')}>
               About
+              <button onClick={toggleSublist} className="sublist-toggle-btn">
+                {isSublistOpen ? "▲":"▼"}
+              </button>
+              {isSublistOpen && (
+                <ul className="sublist">
+                  <li className="sublist-item" onClick={() => navigateAndCloseNav('/about/buckets')}>Data Buckets</li>
+                  <li className="sublist-item" onClick={() => navigateAndCloseNav('/about/branches')}>Branches</li>
+                  <li className="sublist-item" onClick={() => navigateAndCloseNav('/about/submits')}>Submits</li>
+                  <li className="sublist-item" onClick={() => navigateAndCloseNav('/about/data-trie')}>Data Trie</li>
+                  <li className="sublist-item" onClick={() => navigateAndCloseNav('/about/user')}>Contributors</li>
+                  <li className="sublist-item" onClick={() => navigateAndCloseNav('/about/lignification')}>Lignification</li>
+                  <li className="sublist-item" onClick={() => navigateAndCloseNav('/about/proof-of-review')}>Proof of Review</li>
+                  <li className="sublist-item" onClick={() => navigateAndCloseNav('/about/imre-lakatos')}>Imre Lakatos</li>
+                  <li className="sublist-item" onClick={() => navigateAndCloseNav('/about/integration')}>Integration</li>
+                </ul>
+              )}
             </li>
-            <li className="list-group-item" onClick={() => router.push('/get-started')}>
+            <li className="list-group-item" onClick={() => navigateAndCloseNav('/get-started')}>
               Get Started
             </li>
-            <li className="list-group-item" onClick={() => router.push('/community')}>
+            <li className="list-group-item" onClick={() => navigateAndCloseNav('/community')}>
               Community
             </li>
           </ul>

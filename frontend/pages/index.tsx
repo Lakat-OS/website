@@ -3,6 +3,8 @@ import Image from 'next/image';
 import LakatLogo from '../assets/img/Lakatdummy.png';
 import TwitterXLogo from '../assets/img/twitter-x-black.png';
 import GithubLogo from '../assets/img/github-mark.png';
+import TelegramLogo from '../assets/img/telegram-xxl.png';
+
 // import logo from './path-to-your-logo.svg'; // Adjust the path to your logo.svg
 
 function HomePage() {
@@ -15,7 +17,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className="row justify-content-center" style={{ height: '70vh' }}>
+      <div className="row justify-content-center landing-content" style={{ height: '80vh' }}>
         <div className="col">
           {/* Content for the second row */}
           <div>
@@ -46,67 +48,34 @@ function HomePage() {
               facilitate the development of new ones.
             </p>
           </div>
-          <div className="row mt-5">
-            <div className="col-3">
-            <a
-                className={`nav-link`}
-                href="/get-started"
-              >
-              <button
-                className="btn btn-primary btn-constant-width mx-2 my-2"
-                style={{ width: '100%' }}
-              >
-                Get Started
-              </button>
+          <div className="row mt-5" >
+            <div className="button-container" style={{ width: '60%', textAlign: 'center', margin: '0 auto' }}>
+              <a className="nav-link" href="/about">
+                      <span>📚</span> Learn More
               </a>
-            </div>
-            <div className="col-3">
-              <a
-                className={`nav-link`}
-                href="/about"
-              >
-              <button
-                className="btn btn-info btn-constant-width mx-2 my-2"
-                style={{ width: '100%' }}
-              >
-                Learn More
-              </button>
+              <span className="separator">|</span>
+              <a className="nav-link" href="/get-started">
+                      <span>🚀</span> Get Started
               </a>
-            </div>
-            <div className="col-3">
-            <a
-                className={`nav-link`}
-                href="/community"
-              >
-              <button
-                className="btn btn-secondary btn-constant-width mx-2 my-2"
-                style={{ width: '100%' }}
-              >
-                Join the Community
-              </button>
+              <span className="separator">|</span>
+              <a className="nav-link" href="/community">
+                      <span>👥</span> Join the Community
               </a>
-            </div>
-            <div className="col-3">
-              <a
-                href="https://arxiv.org/pdf/2306.09298.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button
-                  className="btn btn-danger btn-constant-width mx-2 my-2"
-                  style={{ width: '100%' }}
-                >
-                  Whitepaper
-                </button>
+              <span className="separator">|</span>
+              <a className="nav-link" 
+                  href="https://arxiv.org/pdf/2306.09298.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                      <span>📄</span> Whitepaper
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="row justify-content-center" style={{ height: '20vh' }}>
+      <div className="row justify-content-center" style={{ height: '10vh' }}>
         <div className="col">
-          <a href="https://github.com/Lakat-OS">
+          <a href="https://github.com/Lakat-OS" target="_blank" rel="noopener noreferrer">
             <Image
               src={GithubLogo}
               alt="Github Icon"
@@ -115,16 +84,24 @@ function HomePage() {
               className="ms-3 mt-3"
             />
           </a>
-          <a href="https://twitter.com/__Lakat__">
+          <a href="https://twitter.com/__Lakat__" target="_blank" rel="noopener noreferrer">
             <Image
               src={TwitterXLogo}
-              alt="Lakat Icon"
+              alt="X Icon"
               width={23}
               height={23}
               className="ms-3 mt-3"
             />
           </a>
-          <a href="your_telegram_link"></a>
+          <a href="https://t.me/+BGvsUzF1ds80YmFk" target="_blank" rel="noopener noreferrer">
+            <Image
+              src={TelegramLogo}
+              alt="Telegram Icon"
+              width={23}
+              height={23}
+              className="ms-3 mt-3"
+            />
+          </a>
         </div>
       </div>
     </div>
