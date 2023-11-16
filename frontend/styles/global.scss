@@ -51,7 +51,7 @@ body {
   background-color: #ede5de;
 
   scrollbar-width: thick;
-    scrollbar-color: black #f1f1f1;
+    scrollbar-color: #6C5B7B #f1f1f1;
 
     // Scrollbar styles
     &::-webkit-scrollbar {
@@ -59,7 +59,7 @@ body {
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: black;
+        background-color: #6C5B7B;
         border-radius: 15px; // Half of the width to make it rounded
     }
 
