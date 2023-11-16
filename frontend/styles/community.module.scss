@@ -16,7 +16,7 @@
     overflow-y: auto;
     text-align: justify;
     scrollbar-width: thick;
-    scrollbar-color: black #f1f1f1;
+    scrollbar-color: #6C5B7B #f1f1f1;
 
     /* Scrollbar styles */
     &::-webkit-scrollbar {
@@ -24,7 +24,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: black;
+        background-color: #6C5B7B;
         border-radius: 15px; /* Half of the width to make it rounded */
     }
 
@@ -39,3 +39,29 @@
     margin: 50px auto 20px;
     // text-align: justify;
 }
+
+// .card {
+//     height: 450px; /* Adjust this value based on your needs */
+//     overflow: hidden; /* This ensures content doesn't overflow the card */
+//   }
+  
+//   .card-img-top {
+//     height: 300px; /* You already have this */
+//     object-fit: cover;
+//     /* objectPosition: center; Uncomment if needed */
+//   }
+  
+//   .card-body {
+//     height: 150px; /* Adjust this value based on your needs */
+//     overflow: hidden; /* Hides overflowed text */
+//     text-overflow: ellipsis; /* Optional: Adds ellipsis to overflowed text */
+//   }
+  
+//   .card-text {
+//     display: -webkit-box;
+//     -webkit-line-clamp: 5; /* Limits the text to 3 lines */
+//     -webkit-box-orient: vertical;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//   }
+  
