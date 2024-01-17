@@ -22,7 +22,7 @@ function HomePage() {
         <div className="col-md-2"></div>
         <div className="col-md-2">
           {/* Column for the logo, left aligned */}
-          <div className="d-flex justify-content-start">
+          <div className="d-flex justify-content-start align-items-center" style={{ height: '100%' }}>
             <Image
               src={LakatLogo}
               alt="Lakat Icon"
