@@ -28,7 +28,7 @@ docker-copies
 /frontend/.cache/
 /frontend/build/
 /frontend/dist/
-/frontend/public/assets/
+# /frontend/public/assets/
 
 # Frontend misc
 /frontend/.env
