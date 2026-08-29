@@ -11,7 +11,7 @@
     "start:next:prod:port": "next start -p 80",
     "start:next:prod": "next start -p 80",
     "build:next:dev": "next build",
-    "next:export": "next export"
+    "build:static": "next build"
   },
   "dependencies": {
     "bootstrap": "^5.3.1",
@@ -36,5 +36,6 @@
     "dotenv-webpack": "^8.0.1",
     "prettier": "^3.0.1",
     "webpack-merge": "^5.9.0"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }

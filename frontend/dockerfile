@@ -1,34 +1,25 @@
-# Use the official image as a parent image
-FROM node:18
+FROM node:18 AS build
 
-# Set the maintainer label
-LABEL maintainer="leonhard.horstmeyer@gmail.com"
-
-ENV DEBIAN_FRONTEND=noninteractive
+WORKDIR /website
 
 ARG REACT_APP_DEVELOPMENT_MODE
 ARG REACT_APP_DOCKERIZED
+ARG NEXT_PUBLIC_BACKEND_URL
 
-# Then, set them as environment variables so they are available during the build
 ENV REACT_APP_DEVELOPMENT_MODE=$REACT_APP_DEVELOPMENT_MODE
 ENV REACT_APP_DOCKERIZED=$REACT_APP_DOCKERIZED
-# Set the working directory
-WORKDIR /website
+ENV NEXT_PUBLIC_BACKEND_URL=$NEXT_PUBLIC_BACKEND_URL
 
-# Copy package.json and yarn.lock
 COPY package.json yarn.lock ./
+RUN corepack enable && yarn install --frozen-lockfile
 
-# Install dependencies
-RUN yarn install
-
-# Copy the rest of the app
 COPY . .
+RUN yarn build:static
 
-# Build the app
-RUN yarn build:next:dev --debug
+FROM httpd:2.4-alpine
 
-# Expose the port the app runs on
+COPY --from=build /website/out/ /usr/local/apache2/htdocs/
+COPY static-httpd.conf /usr/local/apache2/conf/extra/static-httpd.conf
+RUN echo 'Include conf/extra/static-httpd.conf' >> /usr/local/apache2/conf/httpd.conf
+
 EXPOSE 80
-
-# Command to run the application
-CMD ["yarn", "start:next:prod:H:port"]

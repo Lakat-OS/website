@@ -1,3 +1,4 @@
 node_modules
 frontend_depreciated__.dockerfile
-# .next
+.next
+out
