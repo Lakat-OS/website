@@ -1,7 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import LakatIcon from '../assets/img/lakat_icon_circle_green.svg';
 import styles from '../styles/about.module.scss';
 
 // Token-related enquiries go to info@, not to the general mail@ address.
@@ -12,6 +11,12 @@ const TOKEN_EMAIL = 'info@lakat.science';
 // form already carries its own heading and copy.
 // Empty this string and the banner falls back to inviting people to write in.
 const MAILING_LIST_URL = 'https://preview.mailerlite.io/forms/2606690/197315571557074560/share';
+
+// Served from public/, so these are stable URLs that do not change when the
+// site is rebuilt — token lists, explorers and wallets can link straight to them.
+const LOGO_SVG = '/assets/lakat-token.svg';
+const LOGO_PNG_256 = '/assets/lakat-token-256.png';
+const LOGO_PNG_32 = '/assets/lakat-token-32.png';
 
 const ETHERSCAN = 'https://etherscan.io/address/';
 const LKT_ADDRESS = '0x8FaAC80bB99D8853d4245d20ada7101333c2D6fB';
@@ -33,7 +38,7 @@ const LakatToken: NextPage = () => {
       {/* Flex + center, rather than vertical-align: middle, which lines the icon up
           against the text baseline and sits visibly low next to a large heading. */}
       <h1 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-        <Image src={LakatIcon} alt="Lakat" width={32} height={32} />
+        <Image src={LOGO_SVG} alt="Lakat" width={32} height={32} />
         Lakat Token (LKT)
       </h1>
 
@@ -138,6 +143,24 @@ const LakatToken: NextPage = () => {
                 <b>Upgradeability</b>
               </td>
               <td>UUPS proxy; the owner can replace the implementation</td>
+            </tr>
+            <tr>
+              <td>
+                <b>Logo</b>
+              </td>
+              <td>
+                <a href={LOGO_SVG} target="_blank" rel="noopener noreferrer">
+                  SVG
+                </a>
+                {' · '}
+                <a href={LOGO_PNG_256} target="_blank" rel="noopener noreferrer">
+                  PNG 256&times;256
+                </a>
+                {' · '}
+                <a href={LOGO_PNG_32} target="_blank" rel="noopener noreferrer">
+                  PNG 32&times;32
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
