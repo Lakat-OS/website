@@ -87,6 +87,9 @@ function MyApp({ Component, pageProps }: AppProps) {
               <li className="list-group-item" onClick={() => navigateAndCloseNav('/get-started')}>
                 Get Started
               </li>
+              <li className="list-group-item" onClick={() => navigateAndCloseNav('/news')}>
+                News
+              </li>
               <li className="list-group-item" onClick={() => navigateAndCloseNav('/community')}>
                 Community
               </li>
