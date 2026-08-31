@@ -4,6 +4,7 @@ import LeonhardHorstmeyer from '../assets/img/Leo_closeup.png';
 import MahdiKourehpaz from '../assets/img/MahdiKourehpaz.jpeg';
 import AdrianZhunussov from '../assets/img/AdrianZhunussov.jpg';
 import KuzmaKudim from '../assets/img/KuzmaKudim.jpeg';
+import LinkedInLogo from '../assets/img/linkedin-blue.svg';
 import styles from '../styles/community.module.scss'; // Assuming you have a community.module.scss for styles
 
 export default function Community() {
@@ -34,21 +35,25 @@ export default function Community() {
                     {[
                         {
                             display:'Leonhard Horstmeyer',
+                            linkedin: 'https://www.linkedin.com/in/leonhard-horstmeyer/',
                             image_url: LeonhardHorstmeyer,
                             description: 'Leonhard is a theoretical physicist, researcher and a blockchain developer. He has been involved in the architecture of several blockchain projects and an active academic researcher.'
                         },
                         {
                             display:'Adrian Zhunussov',
+                            linkedin: '',
                             image_url: AdrianZhunussov,
                             description: 'Adrian is a product manager in the fintech and web3 sphere. He has experience with data-driven decentralized systems and DeSci.'
                         },
                         {
                             display:'Kuzma Kudim',
+                            linkedin: '',
                             image_url: KuzmaKudim,
                             description: 'Senior software developer with a diverse background, spanning from cryptographic services to web SaaS projects, supported by a strong foundation in mathematics and research experience in digital libraries.'
                         },
                         {
                             display:'Mahdi Kourehpaz',
+                            linkedin: '',
                             image_url: MahdiKourehpaz,
                             description: 'Mahdi is a data scientist, scholar in quantum chaos, software engineer and a tar player.'
                         }].map((name, index) => (
@@ -63,7 +68,25 @@ export default function Community() {
                                 // objectPosition="center"
                             />
                             <div className="card-body">
-                                <h5 className="card-title">{name.display}</h5>
+                                <h5 className="card-title">
+                                    {name.display}
+                                    {name.linkedin && (
+                                        <a
+                                            href={name.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            title={`${name.display} on LinkedIn`}
+                                            className="ms-2 align-middle"
+                                        >
+                                            <Image
+                                                src={LinkedInLogo}
+                                                alt={`${name.display} on LinkedIn`}
+                                                width={18}
+                                                height={18}
+                                            />
+                                        </a>
+                                    )}
+                                </h5>
                                 <p className="card-text">
                                 {name.description}
                                 </p>

@@ -4,6 +4,7 @@ import LakatLogo from '../assets/img/Lakat_logo_green_TRANSPARENT.png';
 import TwitterXLogo from '../assets/img/twitter-x-black.png';
 import GithubLogo from '../assets/img/github-mark.png';
 import TelegramLogo from '../assets/img/telegram-xxl.png';
+import EmailLogo from '../assets/img/email-black.svg';
 
 // import logo from './path-to-your-logo.svg'; // Adjust the path to your logo.svg
 
@@ -72,6 +73,10 @@ function HomePage() {
               <span>🚀</span> Get Started
             </a>
             <span className="separator">|</span>
+            <a className="nav-link" href="/news">
+              <span>📰</span> News
+            </a>
+            <span className="separator">|</span>
             <a className="nav-link" href="/community">
               <span>👥</span> Join the Community
             </a>
@@ -113,6 +118,15 @@ function HomePage() {
             <Image
               src={TelegramLogo}
               alt="Telegram Icon"
+              width={23}
+              height={23}
+              className="ms-3 mt-3"
+            />
+          </a>
+          <a href="mailto:info@lakat.science" title="info@lakat.science">
+            <Image
+              src={EmailLogo}
+              alt="Email Icon"
               width={23}
               height={23}
               className="ms-3 mt-3"

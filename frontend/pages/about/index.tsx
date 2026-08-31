@@ -49,9 +49,10 @@ the IPLD CID format. Storage is handled by a networking component in Lakat, whic
                 </div>
 
                 <div className={styles.level1}>
-                    <a className={`nav-link ${styles.link}`} href="/about/user/token-contributor">
+                    <a className={`nav-link ${styles.link}`} href="/about/user/token-contributor" style={{ display: 'inline' }}>
                         <span className={styles.roundedSquare}></span> Token Contributors
-                    </a>
+                    </a>{' '}
+                    (see also <a href="/lakat-token">Lakat Token</a>)
                     <p>These are individuals or entities that have made contributions to the token entry of a specific branch. A Token contributor can prove to have deposited funds into the branch. Not every branch needs to have token contributors. </p>
                 </div>
 
